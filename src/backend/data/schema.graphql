@@ -1,0 +1,133 @@
+schema {
+  query: RootQuery
+  mutation: RootMutation
+}
+
+input addLiveresultInput {
+  gameParts: [LiveresultGamePartsInput]
+  clientMutationId: String
+}
+
+type addLiveresultPayload {
+  viewer: Viewer
+  changedLiveresultEdge: changedLiveresultEdge
+  clientMutationId: String
+}
+
+type changedLiveresultEdge {
+  node: changedLiveresultNode
+  cursor: String!
+}
+
+type changedLiveresultNode {
+  gameParts: [LiveresultGameParts]
+  _id: ID
+  id: ID!
+}
+
+input deleteLiveresultInput {
+  id: ID!
+  clientMutationId: String
+}
+
+type deleteLiveresultPayload {
+  viewer: Viewer
+  ok: Boolean
+  id: ID!
+  clientMutationId: String
+}
+
+type Liveresult implements Node {
+  gameParts: [LiveresultGameParts]
+  _id: ID
+  id: ID!
+}
+
+type LiveresultConnection {
+  pageInfo: PageInfo!
+  edges: [LiveresultEdge]
+  count: Float
+}
+
+type LiveresultEdge {
+  node: Liveresult
+  cursor: String!
+}
+
+type LiveresultGameParts {
+  tournamentPart: String
+  table: [LiveresultGamePartsTable]
+  _id: ID
+}
+
+input LiveresultGamePartsInput {
+  tournamentPart: String
+  table: [LiveresultGamePartsTableInput]
+  _id: ID
+}
+
+type LiveresultGamePartsTable {
+  dateMatch: String
+  timer: String
+  playing: String
+  teamHome: String
+  score: String
+  teamAway: String
+  _id: ID
+}
+
+input LiveresultGamePartsTableInput {
+  dateMatch: String
+  timer: String
+  playing: String
+  teamHome: String
+  score: String
+  teamAway: String
+  _id: ID
+}
+
+interface Node {
+  id: ID!
+}
+
+enum orderByLiveresult {
+  _ID_ASC
+  _ID_DESC
+}
+
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+  endCursor: String
+}
+
+type RootMutation {
+  addLiveresult(input: addLiveresultInput!): addLiveresultPayload
+  updateLiveresult(input: updateLiveresultInput!): updateLiveresultPayload
+  deleteLiveresult(input: deleteLiveresultInput!): deleteLiveresultPayload
+}
+
+type RootQuery {
+  liveresult(id: ID!): Liveresult
+  liveresults(id: [ID], ids: [ID], orderBy: orderByLiveresult, _id: ID): [Liveresult]
+  viewer: Viewer
+  node(id: ID!): Node
+}
+
+input updateLiveresultInput {
+  gameParts: [LiveresultGamePartsInput]
+  id: ID!
+  clientMutationId: String
+}
+
+type updateLiveresultPayload {
+  changedLiveresult: Liveresult
+  clientMutationId: String
+}
+
+type Viewer implements Node {
+  id: ID!
+  liveresults(after: String, first: Int, before: String, last: Int, orderBy: orderByLiveresult, _id: ID): LiveresultConnection
+  liveresult(id: ID!): Liveresult
+}
