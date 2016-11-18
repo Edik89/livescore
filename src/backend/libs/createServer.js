@@ -14,8 +14,7 @@ export default async function createServer(port) {
 	const app = new Koa();
 	const router = new Router();
 
-
-	if (process.env.NODE_ENV == 'production') {
+  if (process.env.NODE_ENV == 'production') {
     app.use(convert(serve('/home/eddie/node/chat/src/frontend/public')));
     console.log("true production");
   } else {
@@ -24,17 +23,16 @@ export default async function createServer(port) {
     devServer(app);
   }
 
-	app.use(router.allowedMethods())
-		.use(router.routes())
-		.use(convert(bodyParser()))
-		.use(convert( graffiti.koa({ schema }) ) );
+  app.use(router.allowedMethods())
+	.use(router.routes())
+	.use(convert(bodyParser()))
+	.use(convert( graffiti.koa({ schema }) ) );
 
-	app.use((ctx) => {
-		if (ctx.url === '/') {
+  app.use((ctx) => {
+    if (ctx.url === '/') {
       ctx.body = indexView();
     }
-	});
+  });
 
-	app.listen(port);
-
+   app.listen(port);
 }
