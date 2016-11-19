@@ -34,11 +34,7 @@ export default class TableLiveItem extends React.Component {
           <tbody>
             {
               items.gameParts.map((val, r) =>
-
-                (val) ?
-
                   [
-
                     val.table.map((res, i) =>
                       (res.playing) ?
                         [
@@ -59,11 +55,8 @@ export default class TableLiveItem extends React.Component {
                         ]
 
                       : false
-
                     )
                   ]
-
-                  : false
               )
             }
           </tbody>

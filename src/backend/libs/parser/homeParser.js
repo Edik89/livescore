@@ -10,11 +10,11 @@ const urlPageParser = {
 
 export default async function createParser(url) {
 
-  const browser = await phantom.create();
-
-  const page = await browser.createPage();
-
     let timerId = setTimeout( async function tick() {
+
+      const browser = await phantom.create();
+
+      const page = await browser.createPage();
 
       let status = await page.open(urlPageParser.urlPage);
 
@@ -31,6 +31,8 @@ export default async function createParser(url) {
           console.log('The raw response from Mongo was ', raw);
 
         });
+
+      await browser.exit();
 
       setTimeout(tick, 60000);
 

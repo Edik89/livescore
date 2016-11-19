@@ -3,7 +3,7 @@
   "presets": [
     {
       "plugins": [
-        "/home/eddie/node/chat/src/backend/bin/babelRelayPlugin",
+        "../backend/bin/babelRelayPlugin",
         "transform-runtime"
       ]
     },
