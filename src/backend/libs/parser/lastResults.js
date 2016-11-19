@@ -118,5 +118,5 @@ export default async function lastResults(page) {
 	});
 
 	return LastResultJQ;
-	//console.log(LastResultJQ.gameParts[1].table);
+
 }
