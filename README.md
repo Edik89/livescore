@@ -14,4 +14,4 @@
     }`
   };
 ```
-+ and watch ```http://localhost:3000/```
+ + and watch ```http://localhost:3000/```
