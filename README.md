@@ -17,7 +17,7 @@ npm start # run the application on port 3000
 Open your browser `http://localhost:3000/graphql` 
 and copy **id** (Object Identification [facebook.github.io](https://facebook.github.io/relay/docs/graphql-object-identification.html) )
 ![alt text](https://pp.vk.me/c638826/v638826770/125fd/VQcC4fyv-GA.jpg)
-this **id** inserted to (frontend/app/routes/Router.jsx)
+this **id** inserted to (src/frontend/app/routes/Router.jsx)
  ```js
  static queries = {
     viewer: () => Relay.QL`query{
