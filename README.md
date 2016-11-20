@@ -1,5 +1,6 @@
-# livescore
-###### Soccer live results service on Flash Score offers scores from 1000+ soccer leagues. 
+# livescore 
+###### Soccer live results service on Flash Score offers scores from 1000+ soccer leagues*. 
+ 
 
 ### Installation
 Clone or download this repo 
