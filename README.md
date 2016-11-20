@@ -5,12 +5,14 @@ Clone or download this repo
 ```
 https://github.com/Edik89/livescore.git
 ```
-Run a Command in console: ```npm install``` and ```npm start``` 
+Run a Command in console: 
+```shell
+cd livescore-master
+npm install # install dependencies in the main folder
+npm start # run the application on port 3000
+``` 
 
-Open in Browser 
- ```
- http://localhost:3000/graphql
- ``` 
+Open your browser `http://localhost:3000/graphql` 
 and copy id
 ![alt text](https://pp.vk.me/c638826/v638826770/125fd/VQcC4fyv-GA.jpg)
 this id inserted to (frontend/app/routes/Router.jsx)
