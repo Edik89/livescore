@@ -23,4 +23,4 @@ this id inserted to (frontend/app/routes/Router.jsx)
     }`
   };
 ```
-and watch ```http://localhost:3000/```
+and open your browser: `http://localhost:3000/`
