@@ -6,7 +6,7 @@
  + Open in Browser ```http://localhost:3000/graphql``` 
  and copy id
  ![alt text](https://pp.vk.me/c638826/v638826770/125fd/VQcC4fyv-GA.jpg)
- + this id inserted to (frontend/app/routes/TestRouter.jsx)
+ + this id inserted to (frontend/app/routes/Router.jsx)
  ```js
  static queries = {
     viewer: () => Relay.QL`query{
