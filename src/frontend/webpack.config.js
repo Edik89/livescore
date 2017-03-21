@@ -13,10 +13,7 @@ module.exports = {
       'webpack-hot-middleware/client?http://localhost:3000/__webpack_hmr&reload=true',
       './app/index'
     ],
-
-
     vendor:['react-dom', 'react', 'react-relay', 'react-bootstrap']
-
   },
 
   output: {

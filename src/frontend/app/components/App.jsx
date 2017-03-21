@@ -3,7 +3,7 @@ import Relay from 'react-relay';
 import {Tabs, Tab} from 'react-bootstrap';
 import TableEndGames from './TableEndGames';
 import TableAllGames from './TableAllGames';
-//import TableLiveGames from './TableLiveGames';
+import TableLiveGames from './TableLiveGames';
 import TableNextGames from './TableNextGames';
 import poll from 'relay-decorators/lib/poll';
 import './css/app';
@@ -30,7 +30,7 @@ class App extends React.Component {
       <div className="container col-lg-4 col-md-5 col-sm-9 col-sm-offset-3">
         <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
           <Tab eventKey={1} title="Все"><TableAllGames viewer={val} /></Tab>
-          <Tab eventKey={2} title="Live" className="tab_container"></Tab>
+          <Tab eventKey={2} title="Live"><TableLiveGames viewer={val} /></Tab>
           <Tab eventKey={3} title="Расписание"><TableNextGames viewer={val} /></Tab>
           <Tab eventKey={4} title="Завершенные"><TableEndGames viewer={val} /></Tab>
         </Tabs>

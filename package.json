@@ -8,6 +8,8 @@
   "scripts": {
     "start": "nodemon src/backend/bin/dev.js --watch src/backend/",
     "build": "cross-env NODE_ENV=production webpack --config src/frontend/webpack.config.js",
+    "start": "cross-env NODE_ENV=development nodemon src/backend/bin/dev.js --watch src/backend/",
+    "build": "webpack --config src/frontend/webpack.config.js",
     "update-schema": "babel-node src/backend/bin/updateSchema.js"
   },
   "metadata": {
