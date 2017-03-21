@@ -1,0 +1,24 @@
+{
+  "passPerPreset": true,
+  "presets": [
+    {
+      "plugins": [
+        "../backend/bin/babelRelayPlugin",
+        "transform-runtime"
+      ]
+    },
+    "react",
+    "node6",
+    "stage-0",
+    "es2015"
+  ],
+  "plugins": [
+    "transform-runtime",
+    "transform-decorators-legacy"
+  ],
+  "env": {
+    "development": {
+      "presets": ["react-hmre"]
+    }
+  }
+}

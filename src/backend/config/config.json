@@ -1,0 +1,16 @@
+{
+	"ports":{
+		"appPort": 3000,
+		"mongoPort": 2000
+	},
+	"mongoose": {
+		"uri": "mongodb://localhost/graphql",
+		"options": {
+			"server": {
+				"socketOptions": {
+					"keepAlive": 1
+				}
+			}
+		}
+	}
+}
